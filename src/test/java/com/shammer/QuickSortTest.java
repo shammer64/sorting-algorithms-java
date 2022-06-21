@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class QuickSortTest {
 
-    private QuickSorter sorter;
+    private Sorter sorter;
 
     @BeforeEach
     public void initialize() {

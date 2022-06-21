@@ -1,6 +1,7 @@
 package com.shammer;
 
-public class QuickSorter {
+public class QuickSorter implements Sorter {
+    @Override
     public int[] sort(int[] array) {
         if (array.length < 2) return array;
         quicksort(array, 0, array.length - 1);

@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class QuickSortTest {
+public class QuickSorterTest {
 
     private Sorter sorter;
 

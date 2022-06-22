@@ -6,18 +6,15 @@ public class InsertionSorter implements Sorter {
         if (array.length <= 1)
             return array;
         for (int i = 1; i < array.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (array[i] < array[j])
-                    insertElementAt(array, i, j);
+            int j = i - 1;
+            int value = array[i];
+            while (j >= 0 && array[j] > value) {
+                array[j+1] = array[j];
+                j--;
             }
+            array[j+1] = value;
         };
         return array;
-    }
-
-    private void insertElementAt(int[] array, int currIndex, int newIndex) {
-        int tempValue = array[currIndex];
-        shiftElementsOneRight(array, currIndex, newIndex);
-        array[newIndex] = tempValue;
     }
 
     private void shiftElementsOneRight(int[] array, int currIndex, int newIndex) {

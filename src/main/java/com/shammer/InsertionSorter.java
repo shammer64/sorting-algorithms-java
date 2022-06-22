@@ -5,21 +5,20 @@ public class InsertionSorter implements Sorter {
     public int[] sort(int[] array) {
         if (array.length <= 1)
             return array;
-        for (int i = 1; i < array.length; i++) {
-            int j = i - 1;
-            int value = array[i];
-            while (j >= 0 && array[j] > value) {
-                array[j+1] = array[j];
-                j--;
+        for (int startIndex = 1; startIndex < array.length; startIndex++) {
+            int compareIndex = startIndex - 1;
+            int currValue = array[startIndex];
+            while (compareIndex >= 0 && array[compareIndex] > currValue) {
+                shiftRight(array, compareIndex);
+                compareIndex--;
             }
-            array[j+1] = value;
+            array[compareIndex+1] = currValue;
         };
         return array;
     }
 
-    private void shiftElementsOneRight(int[] array, int currIndex, int newIndex) {
-        for (int k = currIndex; k > newIndex; k--) {
-            array[k] = array[k-1];
-        }
+    private void shiftRight(int[] array, int index) {
+        array[index+1] = array[index];
     }
+
 }

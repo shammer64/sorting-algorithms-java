@@ -1,4 +1,4 @@
-package com.shammer;
+package com.shammer.algorithms.sort;
 
 public class QuickSorter implements Sorter {
     @Override
@@ -21,7 +21,7 @@ public class QuickSorter implements Sorter {
         int i = loIndex - 1;
 
         for(int j = loIndex; j < hiIndex; j++) {
-            if (array[j] <= pivot) {
+            if (array[j] < pivot) {
                 i++;
                 swap(array, i, j);
             }

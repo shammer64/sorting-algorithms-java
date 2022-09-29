@@ -1,4 +1,4 @@
-package com.shammer;
+package com.shammer.algorithms.sort;
 
 public class SelectionSorter implements Sorter {
     @Override
